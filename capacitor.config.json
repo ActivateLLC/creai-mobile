@@ -1,0 +1,12 @@
+{
+  "appId": "dev.creai.app",
+  "appName": "CreAI",
+  "webDir": "www",
+  "backgroundColor": "#f4f1ea",
+  "ios": { "contentInset": "never", "limitsNavigationsToAppBoundDomains": false },
+  "android": { "allowMixedContent": false },
+  "plugins": {
+    "SplashScreen": { "launchShowDuration": 600, "backgroundColor": "#f4f1ea", "showSpinner": false },
+    "StatusBar": { "overlaysWebView": false }
+  }
+}

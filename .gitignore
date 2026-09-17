@@ -1,0 +1,11 @@
+node_modules/
+android/.gradle/
+android/build/
+android/app/build/
+android/local.properties
+android/*.keystore
+ios/App/build/
+ios/DerivedData/
+*.p8
+*.mobileprovision
+.env
