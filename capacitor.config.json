@@ -1,6 +1,6 @@
 {
   "appId": "dev.creai.app",
-  "appName": "CreAI",
+  "appName": "Creai",
   "webDir": "www",
   "backgroundColor": "#f4f1ea",
   "ios": { "contentInset": "never", "limitsNavigationsToAppBoundDomains": false },

@@ -1,4 +1,4 @@
-// Pull the current CreAI app from the live server into www/, so the mobile app
+// Pull the current Creai app from the live server into www/, so the mobile app
 // ships the same interface as app.creai.dev, bundled on the device.
 import { mkdir, writeFile } from 'node:fs/promises';
 

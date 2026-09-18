@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <script>(function(){var t;try{t=localStorage.getItem('creai_theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: dark)').matches?'studio':'day';document.documentElement.dataset.theme=t})()</script>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>CreAI — from idea to a live business</title>
-<meta name="description" content="Describe your business. CreAI builds the site, connects your domain and drafts your first campaign — you approve every step.">
+<title>Creai — from idea to a live business</title>
+<meta name="description" content="Describe your business. Creai builds the site, connects your domain and drafts your first campaign — you approve every step.">
 <link rel="icon" href="/logo.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gloock&family=Space+Grotesk:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=VT323&display=swap">
@@ -255,7 +255,7 @@ input:focus{outline:none;border-color:var(--leaf)}
 <div class="veil" aria-hidden="true"></div>
 <header>
   <img class="mark" src="/logo-mark.png" alt="">
-  <span class="brand">CreAI</span>
+  <span class="brand">Creai</span>
   <span class="spacer"></span>
   <button class="themebtn" id="thBtn" type="button" aria-label="Change theme"><span class="sw" aria-hidden="true"></span><span id="thName">Day</span></button>
   <button class="chipbtn" id="credBtn" type="button" hidden aria-label="Credits"><span class="dot">●</span><span id="credTxt">–</span></button>
@@ -272,7 +272,7 @@ input:focus{outline:none;border-color:var(--leaf)}
     <div id="composer">
       <div class="chips" id="starters"></div>
       <div class="bar">
-        <label for="input" class="sr">Message CreAI</label>
+        <label for="input" class="sr">Message Creai</label>
         <textarea id="input" rows="1" placeholder="Describe your business…"></textarea>
         <div class="intent">
           <button class="intentbtn" id="intentBtn" type="button" aria-haspopup="menu" aria-expanded="false"><span id="intentName">Build</span><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M6 15l6-6 6 6"/></svg></button>
@@ -345,7 +345,7 @@ input:focus{outline:none;border-color:var(--leaf)}
 <dialog id="dGrow">
   <form id="fGrow">
     <h2>Grow your business</h2>
-    <p class="muted">Share your website. CreAI reads it to learn your voice, services and colours, then plans posts that link back to it.</p>
+    <p class="muted">Share your website. Creai reads it to learn your voice, services and colours, then plans posts that link back to it.</p>
     <label for="growUrl">Your website</label>
     <input type="text" id="growUrl" placeholder="yourbusiness.com" inputmode="url" autocomplete="url" required>
     <p class="err" id="growErr" style="margin:0"></p>
@@ -379,7 +379,7 @@ const STARTERS = [
   'Bookkeeping for small construction companies.'
 ];
 
-// Inside the CreAI mobile app this same page runs from the device, so API calls
+// Inside the Creai mobile app this same page runs from the device, so API calls
 // go to the live server and the draft travels in a header instead of a cookie.
 const NATIVE = !!(window.Capacitor && window.Capacitor.isNativePlatform && window.Capacitor.isNativePlatform());
 const PLATFORM = NATIVE ? window.Capacitor.getPlatform() : 'web';
@@ -567,7 +567,7 @@ function openSign(after, title) {
   $('codeRow').hidden = true; $('signGo').textContent = 'Email me a code'; $('signErr').textContent = '';
   $('dSign').showModal();
 }
-$('signBtn').onclick = () => { if (S.token) return signOut(); openSign(null, 'Sign in to CreAI'); };
+$('signBtn').onclick = () => { if (S.token) return signOut(); openSign(null, 'Sign in to Creai'); };
 $('fSign').onsubmit = async (e) => {
   e.preventDefault(); $('signErr').textContent = '';
   const email = $('email').value.trim();
@@ -657,7 +657,7 @@ $('fDomain').onsubmit = async (e) => {
 async function loadDomains() {
   if (!S.token) return;
   const pane = $('pDomain'); pane.replaceChildren();
-  const head = el('div'); head.append(el('h2', null, 'Domain'), el('p', 'muted', 'Connect a domain you already own. Registering new domains through CreAI is coming.'));
+  const head = el('div'); head.append(el('h2', null, 'Domain'), el('p', 'muted', 'Connect a domain you already own. Registering new domains through Creai is coming.'));
   const add = el('button', 'btn primary', 'Connect a domain'); add.type = 'button';
   add.onclick = () => runAction({ kind: 'connect_domain' });
   head.append(add); head.style.marginBottom = '16px'; pane.append(head);
@@ -768,13 +768,13 @@ async function loadConnections() {
   const pane = $('pConnect'); pane.replaceChildren();
   const head = el('div'); head.style.marginBottom = '16px';
   head.append(el('h2', null, 'Edit a site you already have'),
-    el('p', 'muted', 'Connect your platform once. CreAI edits pages, copy, SEO, CMS and layout; anything public or permanent waits for your OK.'));
+    el('p', 'muted', 'Connect your platform once. Creai edits pages, copy, SEO, CMS and layout; anything public or permanent waits for your OK.'));
   pane.append(head);
   let list = [];
   try { list = await api('/v1/connections'); } catch (e) { pane.append(el('p', 'err', e.message)); return; }
   const social = el('div', 'card');
   social.append(el('p', 'label', 'Social channels'),
-    el('p', 'note', 'Instagram, Facebook, Google Business Profile, LinkedIn, TikTok and X. Connecting them here is coming next; until then CreAI drafts and schedules posts for your approval.'));
+    el('p', 'note', 'Instagram, Facebook, Google Business Profile, LinkedIn, TikTok and X. Connecting them here is coming next; until then Creai drafts and schedules posts for your approval.'));
   pane.append(social);
   for (const p of list) {
     const card = el('div', 'card');
@@ -960,7 +960,7 @@ async function openPay(pack) {
     const holder = el('div'); $('payBox').replaceChildren(holder);
     const pe = elements.create('payment', {
       layout: { type: 'accordion', defaultCollapsed: false, radios: true, spacedAccordionItems: true },
-      business: { name: 'CreAI' },
+      business: { name: 'Creai' },
       wallets: { applePay: 'auto', googlePay: 'auto' },
       terms: { card: 'never' }
     });

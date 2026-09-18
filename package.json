@@ -2,7 +2,7 @@
   "name": "creai-mobile",
   "private": true,
   "version": "1.0.0",
-  "description": "CreAI for iPhone and Android",
+  "description": "Creai for iPhone and Android",
   "type": "module",
   "scripts": {
     "web": "node scripts/sync-web.mjs",

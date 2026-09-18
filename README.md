@@ -1,6 +1,6 @@
-# CreAI for iPhone and Android
+# Creai for iPhone and Android
 
-The CreAI app for the App Store and Google Play, built with [Capacitor](https://capacitorjs.com) (MIT).
+The Creai app for the App Store and Google Play, built with [Capacitor](https://capacitorjs.com) (MIT).
 It bundles the same interface as [app.creai.dev](https://app.creai.dev) on the device and talks to the
 live API, with native pieces on top: system-browser sign-in that returns to the app (`creai://auth`),
 native splash, status bar and haptics.
